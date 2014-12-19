@@ -14,6 +14,8 @@ doubleStd.log('Double the fun?');
 doubleStd.write(' ... ');
 doubleStd.log('Maybe not.');
 
+stee.teeToStdoutOnly().log('That\'s better.');
+
 var dualRecorder = new stee.LogFileTee('test.log');
 dualRecorder.log('Writing to "%s" and stdout.', dualRecorder.logfile);
 ```

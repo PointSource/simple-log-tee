@@ -19,4 +19,7 @@ stee.teeToNowhere().write('But this is going nowhere!');
 
 var dualRecorder = new stee.LogFileTee('test.log');
 dualRecorder.log('Writing to "%s" and stdout.', dualRecorder.logfile);
+
+var fileOnly = new stee.LogFileTee('t2.log');
+fileOnly.write('one line only in ' + fileOnly.logfile);
 ```

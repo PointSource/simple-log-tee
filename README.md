@@ -1,6 +1,6 @@
 # simple-log-tee
 
-Log and write to multiple streams at the same time.
+Log, and write, to multiple streams at the same time.
 
 This is really handy for logging output to the console and to a file at the same time.
 

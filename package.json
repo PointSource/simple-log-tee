@@ -1,6 +1,6 @@
 {
   "name": "simple-log-tee",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Log, and write to, multiple streams at the same time.",
   "main": "index.js",
   "scripts": {

@@ -1,4 +1,5 @@
 var LogTee = require('./lib/LogTee');
+var LogFileTee = require('./lib/LogFileTee');
 
 var stdoutOnlyTee = new LogTee([process.stdout]);
 exports.teeToStdoutOnly = function () {
@@ -10,5 +11,10 @@ exports.teeToNowhere = function () {
 	return emptyTee;
 };
 
-exports.LogTee = LogTee;
-exports.LogFileTee = require('./lib/LogFileTee');
+exports.createLogTee = function (streams) {
+	return new LogTee(streams);
+};
+
+exports.createLogFileTee = function (filename, stream2) {
+	return new LogFileTee(filename, stream2);
+};

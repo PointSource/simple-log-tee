@@ -23,3 +23,7 @@ dualRecorder.log('Writing to "%s" and stdout.', dualRecorder.logfile);
 var fileOnly = stee.createLogFileTee('t2.log', null);
 fileOnly.write('one line, only in ' + fileOnly.logfile);
 ```
+
+**Note:** as of version 0.2.0, the API has been changed to no longer export classes that you create with `new`, but functions that create the objects for you.  
+Replace `new stee.LogTee([stream1, stream2, stream3])` with `stee.createLogTee([stream1, stream2, stream3])`.  
+Replace `new stee.LogFileTee('my.log')` with `stee.createLogFileTee('my.log')`.
